@@ -8,6 +8,21 @@ def calculateDailyTarget():
     #getting the monthly target from user
     monthlyTarget = int(input("Enter Monthly Target"))
 
+    #for now our code can consit work on a 30 days calender
+    #over 4 weeks
+    weeklytarget = monthlyTarget/4
+    dailytarget = monthlyTarget/30
+
+
+    #we are starting with a new target after a day
+    NewMonthlyTarget = monthlyTarget -salesDoneOnTheDay
+
+
+
+
+
+
+
     print("Your Monthly Target is", monthlyTarget)
     #get the days they planning to finish project in
     numberOfWorlkingDays = int(input("Enter number of working days"))
