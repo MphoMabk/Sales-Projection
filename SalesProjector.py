@@ -2,56 +2,33 @@ import datetime
 import os
 
 
-
 def calculateDailyTarget():
     os.system("clear")
     #getting the monthly target from user
-    monthlyTarget = int(input("Enter Monthly Target"))
+    monthlyTarget = 20
 
     #for now our code can consit work on a 30 days calender
     #over 4 weeks
     weeklytarget = monthlyTarget/4
     dailytarget = monthlyTarget/30
 
+    print("Your weekly target is: ",weeklytarget)
+    print("Your daily target is ",dailytarget)
 
     #we are starting with a new target after a day
-    NewMonthlyTarget = monthlyTarget -salesDoneOnTheDay
-
-
-
-
-
-
-
-    print("Your Monthly Target is", monthlyTarget)
-    #get the days they planning to finish project in
-    numberOfWorlkingDays = int(input("Enter number of working days"))
-    print("This month we have",numberOfWorlkingDays,"working days")
-
-    #calculates the daily target needed
+    salesOnTheDay = 1
+    NewMonthlyTarget = monthlyTarget -salesOnTheDay
+    print("your new Traget is: ", NewMonthlyTarget)
     
-    dailyTarget = monthlyTarget/numberOfWorlkingDays
-    print("Your Daily Terget is", dailyTarget)
-        #gets the number of sales made
+    #calculating days left starting from 30 days and 5 days in a week
+    DaysInWeek = 7
+    salesprogress =1
+    dayscomplete = 1
 
 
+    projectedMonthlyTarget = monthlyTarget - (salesprogress*dayscomplete)
 
-    salesDoneOnTheDay = int(input("How much sales did you do today"))
-    dailySales =  dailyTarget-salesDoneOnTheDay 
-    print("You are running shot of",dailySales,"sales")
-
-
-    
-    numberOfDaysLeft = numberOfWorlkingDays - 1
-
-
-    #calculate the new monthly target after after a single day
-    newMonthlyTarget = monthlyTarget - salesDoneOnTheDay
-    print("we have a new monthly target of",newMonthlyTarget,"after the first day")
-
-    #calculates the daily target based on sales still to do
-    newDailyTarget = newMonthlyTarget/numberOfDaysLeft
-    print("you now have",numberOfDaysLeft,"days to reach", newDailyTarget)
+    print("your new Projection ",projectedMonthlyTarget)
 
 # def calculate
 
